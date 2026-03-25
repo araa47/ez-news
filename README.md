@@ -7,6 +7,9 @@ AI skills to browse and search news from the terminal for [Claude Code](https://
 | Skill | Description |
 |-------|-------------|
 | **ez-hn** | Browse and search Hacker News - top/new/best stories, comments, user profiles, Algolia search, "Who is hiring?" |
+| **ez-lobsters** | Browse and search Lobste.rs - hottest/newest stories, tag filtering, comments, search |
+| **ez-github** | Discover trending GitHub repos - trending by language/period, repo details, releases, search |
+| **ez-devto** | Browse and search DEV.to - top/latest/rising articles, tag filtering, comments, popular tags |
 
 No API keys or authentication required.
 
