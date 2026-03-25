@@ -1,0 +1,13 @@
+# ez-news
+
+Ai Skills to get news
+
+## Requirements
+
+This assumes you have [direnv](https://direnv.net/) and [uv](https://github.com/astral-sh/uv) installed.
+
+Simply run `direnv allow` to setup the environment, you can read the contents of [.envrc](.envrc) to see what it does behind the scenes.
+
+## Code Quality
+
+This project uses [prek](https://github.com/astral-sh/prek) for managing pre-commit hooks (a faster Rust-based alternative to pre-commit). See [.pre-commit-config.yaml](.pre-commit-config.yaml) for configured hooks.
