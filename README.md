@@ -1,13 +1,54 @@
 # ez-news
 
-Ai Skills to get news
+AI skills to browse and search news from the terminal for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+
+## Skills
+
+| Skill | Description |
+|-------|-------------|
+| **ez-hn** | Browse and search Hacker News - top/new/best stories, comments, user profiles, Algolia search, "Who is hiring?" |
+
+No API keys or authentication required.
+
+## Installation
+
+```bash
+npx skills add araa47/ez-news
+```
 
 ## Requirements
 
-This assumes you have [direnv](https://direnv.net/) and [uv](https://github.com/astral-sh/uv) installed.
+- Python 3.13+
+- [uv](https://github.com/astral-sh/uv)
 
-Simply run `direnv allow` to setup the environment, you can read the contents of [.envrc](.envrc) to see what it does behind the scenes.
+## Quick Start
 
-## Code Quality
+```bash
+# Top stories
+uv run skills/ez-hn/scripts/hn.py top
 
-This project uses [prek](https://github.com/astral-sh/prek) for managing pre-commit hooks (a faster Rust-based alternative to pre-commit). See [.pre-commit-config.yaml](.pre-commit-config.yaml) for configured hooks.
+# Search
+uv run skills/ez-hn/scripts/hn.py search "LLM"
+
+# Item details and comments
+uv run skills/ez-hn/scripts/hn.py item 12345678
+uv run skills/ez-hn/scripts/hn.py comments 12345678
+
+# User profile
+uv run skills/ez-hn/scripts/hn.py user dang
+
+# Who is hiring?
+uv run skills/ez-hn/scripts/hn.py whoishiring
+```
+
+All commands support `--json` for raw JSON output and `--limit` to control result count.
+
+See the skill's [SKILL.md](skills/ez-hn/SKILL.md) for full usage details.
+
+## Contributing
+
+1. Install dependencies: `uv sync --all-extras`
+2. Make your changes
+3. Ensure pre-commit hooks pass: `prek run --all-files`
+4. Ensure tests pass: `uv run -m pytest`
+5. Submit a PR
